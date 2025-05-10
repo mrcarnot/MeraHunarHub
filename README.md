@@ -7,63 +7,54 @@ though some of the feautures like overall rating cacluclations and notification 
 ## Features
 
 ###  Maker Workflow
-- Register and login as a Maker
-- Add handmade items with title, description, and price
-- View personal product listings
-- View account balance (simulated)
-- Receive payments from buyer orders
-
+- Register and login as a Maker <br>
+- Add handmade items with title, description, and price <br>
+- View personal product listings <br>
+- View account balance (simulated) <br>
+- Receive payments from buyer orders <br>
+ <br>
 ### Buyer Workflow
-- Register and login as a Buyer
-- Browse products by maker or by category (the category thing is in-progress )
-- Add products to a cart or purchase immediately
-- View cart, remove items, or checkout
-- View account balance
-- View order history and generate receipts
-- Leave reviews on purchased products
+- Register and login as a Buyer <br>
+- Browse products by maker or by category (the category thing is in-progress ) <br>
+- Add products to a cart or purchase immediately <br>
+- View cart, remove items, or checkout <br>
+- View account balance <br>
+- View order history and generate receipts <br>
+- Leave reviews on purchased products <br>
 
-### 🧾 Order & Receipt System
-- Each order generates a unique ID and timestamp
-- Transfers balance from buyer to maker
-- Prints a receipt with full order details
+###  Order & Receipt System <br>
+- Each order generates a unique ID and timestamp <br>
+- Transfers balance from buyer to maker <br>
+- Prints a receipt with full order details <br>
 
-### ⭐ Review System
-- Buyers can review items they’ve purchased
-- Reviews include star ratings and comments
-- Items display all their associated reviews
-
----
-
-## 🧱 Tech Stack
-
-- Java 17+
-- Object-Oriented Programming
-- Command-line interface (CLI)
-- Git for version control
+###  Review System <br>
+- Buyers can review items they’ve purchased <br>
+- Reviews include star ratings and comments <br>
+- Items display all their associated reviews <br>
 
 ---
 
-## 📂 Folder Structure
-HunarHub/
+## Folder Structure <br>
+HunarHub/ <br>
 │
-├── Main.java # Entry point
-├── User.java # Abstract base class
-├── Maker.java # Seller functionality
-├── Buyer.java # Buyer functionality and menus
-├── Item.java # Handicraft product model
-├── Cart.java # Buyer cart system
-├── Order.java # Order and receipt generation
-├── Review.java # Review model and logic
-├── BankAccount.java # Simulated wallet for users
-├── README.md # Project overview and instructions
-└── .gitignore # Ignores .class files etc.
+├── Main.java # Entry point <br>
+├── User.java # Abstract base class <br>
+├── Maker.java # Seller functionality <br>
+├── Buyer.java # Buyer functionality and menus <br>
+├── Item.java # Handicraft product model <br>
+├── Cart.java # Buyer cart system <br>
+├── Order.java # Order and receipt generation <br>
+├── Review.java # Review model and logic <br>
+├── BankAccount.java # Simulated wallet for users <br>
+├── README.md # Project overview and instructions <br>
+└── .gitignore # Ignores .class files etc. <br>
 <br>
 What is missing ?<br>
-1)File handling 
-2)notification framework
-3)courses logic
-4)gui ka naam-o-nishaan tak nahi he!
-5)delivery framwork
+1)File handling <br>
+2)notification framework <br>
+3)courses logic <br>
+4)gui ka naam-o-nishaan tak nahi he! <br>
+5)delivery framwork <br>
 
 
 
