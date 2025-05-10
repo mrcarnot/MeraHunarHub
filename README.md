@@ -2,7 +2,7 @@ added the order feautre with receipt generation, tested it with a few base cases
 next , i will be sharing it with the group for approval and will be working on it to integrate gui with it <br>
 though some of the feautures like overall rating cacluclations and notification framwork is still missing ,
  <br>=========================<br>
-# HunarHub – A Handicraft Selling Platform for Rural Women 🧵💼
+# HunarHub – A Handicraft Selling Platform for Rural Women 
 
 ## Features
 
