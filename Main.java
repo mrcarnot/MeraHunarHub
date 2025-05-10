@@ -1,7 +1,3 @@
-//package app;
-
-//mport models.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -31,7 +27,7 @@ public class Main {
                     loginUser();
                     break;
                 case 3:
-                    System.out.println("Thank you for visiting HunarHub!");
+                    System.out.println("Thank you for using HunarHub!");
                     break;
                 default:
                     System.out.println("Invalid choice.");
@@ -40,7 +36,7 @@ public class Main {
     }
 
     private static void registerUser() {
-        System.out.print("Enter name: ");
+        System.out.print("Enter your name: ");
         String name = scanner.nextLine();
 
         System.out.print("Enter email: ");
@@ -49,22 +45,22 @@ public class Main {
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
 
-        System.out.println("Select role: 1. Maker  2. Buyer");
-        int role = scanner.nextInt();
+        System.out.println("Register as:\n1. Maker\n2. Buyer");
+        int type = scanner.nextInt();
         scanner.nextLine();
 
         String userId = "U" + (makers.size() + buyers.size() + 1);
 
-        if (role == 1) {
+        if (type == 1) {
             Maker maker = new Maker(userId, name, email, password);
             makers.add(maker);
             System.out.println("Maker registered successfully!");
-        } else if (role == 2) {
+        } else if (type == 2) {
             Buyer buyer = new Buyer(userId, name, email, password);
             buyers.add(buyer);
             System.out.println("Buyer registered successfully!");
         } else {
-            System.out.println("Invalid role.");
+            System.out.println("Invalid user type.");
         }
     }
 
@@ -75,48 +71,22 @@ public class Main {
         System.out.print("Enter password: ");
         String password = scanner.nextLine();
 
-        // Search in Makers
+        // Try Makers
         for (Maker maker : makers) {
             if (maker.getEmail().equals(email) && maker.checkPassword(password)) {
-                System.out.println("Login successful! Welcome, " + maker.getName());
-                maker.showMenu(); // run Maker menu
+                System.out.println("Login successful! Welcome, Maker " + maker.getName());
+                maker.showMenu();
                 return;
             }
         }
 
-        // Search in Buyers
+        // Try Buyers
         for (Buyer buyer : buyers) {
             if (buyer.getEmail().equals(email) && buyer.checkPassword(password)) {
-                System.out.println("Login successful! Welcome, " + buyer.getName());
-
-                // Inject list of makers into browse menu
-                int choice;
-                do {
-                    System.out.println("\n--- Buyer Menu ---");
-                    System.out.println("1. Browse Products");
-                    System.out.println("2. View Account Balance");
-                    System.out.println("3. Logout");
-                    System.out.print("Enter your choice: ");
-                    choice = scanner.nextInt();
-                    scanner.nextLine();
-
-                    switch (choice) {
-                        case 1:
-                            buyer.browseProducts(makers);
-                            break;
-                        case 2:
-                            buyer.viewAccountBalance();
-                            break;
-                        case 3:
-                            System.out.println("Logging out...");
-                            break;
-                        default:
-                            System.out.println("Invalid option.");
-                    }
-
-                } while (choice != 3);
-
-                return;
+                System.out.println("Login successful! Welcome, Buyer " + buyer.getName());
+                buyer.setMakerList(makers); // assign maker list
+                buyer.showMenu();           // call showMenu with no parameters
+                        return;
             }
         }
 
